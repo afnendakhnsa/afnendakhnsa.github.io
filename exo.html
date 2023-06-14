@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>weareone.exo</title>
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {     
+      white-space: pre-line;
+      overflow: hidden;
+      border-right: 0.15em solid #000;
+      color: white;
+      text-align: center;
+    }
+
+    #typing-effect {
+      white-space: pre-line;
+      overflow: hidden;
+      border-right: 0.15em solid #000;
+      font-size: 17px;
+      font-family: monospace;
+      color: white;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi There 👋</>
+  <div id="typing-effect"></div>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/91VhCIQNjIc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+
+  <script>
+
+    const text = "I just wanna inform you that EXO comeback is real!\nTheir 7th Album called 'EXIST' is out on 10th July 2023\nThey also release first b-side track MV 'Let Me In'\nYou can watch their MV below!!\nAnyway, tysm for ur support through EXO comeback🥰";
+    const typingEffect = document.getElementById('typing-effect');
+
+    function typeWriter(text, i) {
+      if (i < text.length) {
+        typingEffect.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(() => typeWriter(text, i), 40);
+      }
+    }
+
+    typeWriter(text, 0);
+  </script>
+</body>
+</html>
