@@ -1,3 +1,0 @@
-# afnendakhnsa.github.io
-
-hii
